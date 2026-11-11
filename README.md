@@ -1,11 +1,4 @@
-<p align="center">
-  <img src="docs/veritas-social-preview.png" alt="veritas: research, verified" width="720">
-</p>
-
-<p align="center">
-  <b>Paste a claim. Watch five AI agents check it against the live web.</b>
-</p>
----
+VERITAS— research, verified
 
 ## What is veritas?
 
