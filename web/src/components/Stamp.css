@@ -1,0 +1,62 @@
+.stamp {
+  position: relative;
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border: 2px solid var(--line);
+  color: var(--ground);
+  background: var(--line);
+  font-family: Newsreader, Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+  transform: rotate(var(--stamp-rotation, 0deg));
+}
+
+.stamp--refuted {
+  border: 3px double var(--stamp-red);
+  color: var(--stamp-red);
+  background: transparent;
+}
+
+.stamp--refuted::after {
+  position: absolute;
+  top: 50%;
+  right: -3px;
+  left: -3px;
+  height: 2px;
+  background: var(--stamp-red);
+  content: "";
+  transform: rotate(-18deg);
+}
+
+.stamp--inconclusive {
+  border: 2px dashed var(--hold);
+  color: var(--hold);
+  background: transparent;
+}
+
+.stamp--pending {
+  border: 1px dashed var(--line-dim);
+  color: var(--line-dim);
+  background: transparent;
+}
+
+.stamp--landing {
+  animation: stamp-land 140ms ease-in both;
+}
+
+@keyframes stamp-land {
+  0% { transform: rotate(var(--stamp-rotation, 0deg)) scale(1.6) translateX(0); }
+  45% { transform: rotate(var(--stamp-rotation, 0deg)) scale(1.05) translateX(-2px); }
+  70% { transform: rotate(var(--stamp-rotation, 0deg)) scale(1.02) translateX(2px); }
+  100% { transform: rotate(var(--stamp-rotation, 0deg)) scale(1) translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp--landing {
+    animation: none;
+  }
+}

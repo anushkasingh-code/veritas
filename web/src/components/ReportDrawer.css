@@ -1,0 +1,115 @@
+.report-overlay {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: color-mix(in srgb, var(--ground-deep) 72%, transparent);
+}
+
+.report-drawer {
+  width: min(560px, 100vw);
+  height: 100%;
+  overflow-y: auto;
+  padding: 28px 32px 48px;
+  border-left: 1px solid var(--line-dim);
+  color: var(--line);
+  background: var(--ground-deep);
+}
+
+.report-drawer__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.report-drawer__header h2 {
+  margin: 0;
+  font-family: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.report-drawer__close {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 6px 12px;
+  border: 1px solid var(--line-dim);
+  border-radius: 0;
+  color: var(--line);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.report-drawer__close:hover {
+  border-color: var(--line);
+  background: var(--ground);
+}
+
+.report-markdown {
+  max-width: 68ch;
+  color: var(--line);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.report-markdown > * + * {
+  margin-top: 18px;
+}
+
+.report-markdown h1,
+.report-markdown h2,
+.report-markdown h3,
+.report-markdown h4,
+.report-markdown h5,
+.report-markdown h6 {
+  margin-top: 30px;
+  font-family: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.report-markdown h1 { font-size: 32px; }
+.report-markdown h2 { font-size: 22px; }
+.report-markdown h3,
+.report-markdown h4,
+.report-markdown h5,
+.report-markdown h6 { font-size: 17px; }
+
+.report-markdown p,
+.report-markdown li {
+  max-width: 68ch;
+}
+
+.report-markdown ul,
+.report-markdown ol {
+  display: grid;
+  gap: 8px;
+  padding-left: 24px;
+}
+
+.report-markdown a {
+  color: var(--line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.report-markdown a:hover {
+  color: var(--line-dim);
+}
+
+@media (max-width: 799px) {
+  .report-drawer {
+    width: 100vw;
+    padding: 20px 20px 36px;
+    border-left: 0;
+  }
+
+  .report-drawer__header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,120 @@
+.agent-rail {
+  align-self: stretch;
+  min-width: 220px;
+  padding: 32px 24px;
+  border-right: 1px solid var(--line-dim);
+}
+
+.agent-rail__steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agent-rail__steps::before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 7px;
+  width: 1px;
+  background: var(--line-dim);
+  content: "";
+}
+
+.agent-rail__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  gap: 0 12px;
+  align-items: center;
+  min-height: 20px;
+}
+
+.agent-rail__node {
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--line-dim);
+  background: var(--ground);
+}
+
+.agent-rail__step--started .agent-rail__node {
+  border-color: var(--line);
+  background: var(--line);
+  animation: rail-pulse 1s ease-in-out infinite;
+}
+
+.agent-rail__step--done .agent-rail__node {
+  border-color: var(--line);
+  background: var(--line);
+}
+
+.agent-rail__label {
+  grid-column: 2;
+  color: var(--line);
+}
+
+.agent-rail__status {
+  grid-column: 2;
+  color: var(--line-dim);
+  font-size: 14px;
+}
+
+.agent-rail__message {
+  margin-top: 32px;
+  color: var(--line-dim);
+  font-size: 17px;
+}
+
+@keyframes rail-pulse {
+  50% { opacity: 0.45; }
+}
+
+@media (max-width: 799px) {
+  .agent-rail {
+    min-width: 0;
+    padding: 16px 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line-dim);
+  }
+
+  .agent-rail__steps {
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 2px 0 6px;
+  }
+
+  .agent-rail__steps::before {
+    top: 9px;
+    right: 8px;
+    bottom: auto;
+    left: 8px;
+    width: auto;
+    height: 1px;
+  }
+
+  .agent-rail__step {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+  }
+
+  .agent-rail__status {
+    display: none;
+  }
+
+  .agent-rail__message {
+    margin-top: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agent-rail__step--started .agent-rail__node {
+    animation: none;
+  }
+}

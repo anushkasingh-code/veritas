@@ -1,0 +1,44 @@
+.threads-layer {
+  position: absolute;
+  z-index: 0;
+  inset: 0 auto auto 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.thread-path {
+  fill: none;
+  stroke: var(--stamp-red);
+  stroke-width: 2px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  pointer-events: stroke;
+  vector-effect: non-scaling-stroke;
+  animation: thread-draw 700ms ease-out forwards;
+}
+
+.thread-tooltip {
+  position: absolute;
+  z-index: 2;
+  width: min(280px, 80vw);
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  color: var(--slip-ink);
+  background: var(--slip);
+  box-shadow: 1px 1px 0 var(--line-dim);
+  font-size: 14px;
+  line-height: 1.4;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes thread-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thread-path {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}

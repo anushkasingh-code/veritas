@@ -1,0 +1,146 @@
+.claim-column {
+  display: flex;
+  width: min(320px, 82vw);
+  min-height: 100%;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  color: var(--line);
+}
+
+.claim-column--underexposed {
+  opacity: 0.65;
+}
+
+.claim-column--develop.claim-column--underexposed {
+  animation: claim-develop-dim 900ms ease-out both;
+}
+
+.claim-column--develop:not(.claim-column--underexposed) {
+  animation: claim-develop-full 900ms ease-out both;
+}
+
+.claim-column__text {
+  max-width: 68ch;
+  margin: 0;
+  font-family: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.claim-column__verdict {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--line-dim);
+  font-size: 14px;
+}
+
+.confidence__ticks {
+  display: inline-flex;
+  height: 14px;
+  align-items: center;
+  gap: 3px;
+}
+
+.confidence__tick {
+  width: 2px;
+  height: 8px;
+  background: var(--line-dim);
+}
+
+.confidence__tick--filled {
+  height: 14px;
+  background: var(--line);
+}
+
+.claim-column__reasoning {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--line);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.claim-column__sources {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.source-slip {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--slip-ink);
+  background: var(--slip);
+  box-shadow: 1px 1px 0 var(--line-dim);
+  text-decoration: none;
+}
+
+.source-slip:focus-visible {
+  outline: 2px solid var(--line);
+  outline-offset: 3px;
+}
+
+.source-slip__domain {
+  overflow: hidden;
+  color: var(--slip-ink);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.source-slip__title {
+  color: var(--slip-ink);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.source-slip__snippet {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--slip-ink);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+@keyframes claim-develop-full {
+  from { opacity: 0; filter: blur(6px) brightness(1.7); }
+  to { opacity: 1; filter: blur(0) brightness(1); }
+}
+
+@keyframes claim-develop-dim {
+  from { opacity: 0; filter: blur(6px) brightness(1.7); }
+  to { opacity: 0.65; filter: blur(0) brightness(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .claim-column--develop {
+    animation: none;
+  }
+
+  .claim-column--underexposed {
+    opacity: 0.65;
+    filter: none;
+  }
+}

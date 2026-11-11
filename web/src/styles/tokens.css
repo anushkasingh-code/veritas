@@ -1,0 +1,100 @@
+:root {
+  --ground: #0e3a78;
+  --ground-deep: #08234d;
+  --line: #eaf2ff;
+  --line-dim: #7fa3d6;
+  --stamp-red: #e5482f;
+  --hold: #f2b84b;
+  --slip: rgba(246, 248, 251, 0.92);
+  --slip-ink: #0b1b3a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background-color: var(--ground);
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--line);
+  font-family: Newsreader, Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.55;
+  background-color: var(--ground);
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-color: color-mix(in srgb, var(--line-dim) 10%, transparent);
+  content: "";
+  pointer-events: none;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M32 0H0V32' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M32 0H0V32' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+}
+
+h1,
+h2,
+h3,
+[data-type="display"] {
+  font-family: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 56px; }
+h2 { font-size: 32px; }
+h3 { font-size: 22px; }
+
+p,
+blockquote,
+article {
+  max-width: 68ch;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+  font-weight: 500;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--line);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
