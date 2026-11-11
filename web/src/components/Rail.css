@@ -2,7 +2,9 @@
   align-self: stretch;
   min-width: 220px;
   padding: 32px 24px;
-  border-right: 1px solid var(--line-dim);
+  color: var(--ink);
+  background: var(--ground-deep);
+  border-right: 1px solid var(--ink-dim);
 }
 
 .agent-rail__steps {
@@ -21,7 +23,7 @@
   bottom: 10px;
   left: 7px;
   width: 1px;
-  background: var(--line-dim);
+  background: var(--ink-dim);
   content: "";
 }
 
@@ -38,35 +40,35 @@
   z-index: 1;
   width: 14px;
   height: 14px;
-  border: 1px solid var(--line-dim);
-  background: var(--ground);
+  border: 1px solid var(--ink-dim);
+  background: var(--ground-deep);
 }
 
 .agent-rail__step--started .agent-rail__node {
-  border-color: var(--line);
-  background: var(--line);
+  border-color: var(--blue);
+  background: var(--blue);
   animation: rail-pulse 1s ease-in-out infinite;
 }
 
 .agent-rail__step--done .agent-rail__node {
-  border-color: var(--line);
-  background: var(--line);
+  border-color: var(--ink);
+  background: var(--ink);
 }
 
 .agent-rail__label {
   grid-column: 2;
-  color: var(--line);
+  color: var(--ink);
 }
 
 .agent-rail__status {
   grid-column: 2;
-  color: var(--line-dim);
+  color: var(--ink);
   font-size: 14px;
 }
 
 .agent-rail__message {
   margin-top: 32px;
-  color: var(--line-dim);
+  color: var(--ink);
   font-size: 17px;
 }
 
@@ -79,7 +81,7 @@
     min-width: 0;
     padding: 16px 20px;
     border-right: 0;
-    border-bottom: 1px solid var(--line-dim);
+    border-bottom: 1px solid var(--ink-dim);
   }
 
   .agent-rail__steps {

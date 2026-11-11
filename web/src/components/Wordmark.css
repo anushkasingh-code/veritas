@@ -1,0 +1,110 @@
+.wordmark {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--ink);
+}
+
+.wordmark--intake {
+  margin-bottom: 36px;
+}
+
+.wordmark--rail {
+  margin-bottom: 32px;
+}
+
+.wordmark__name {
+  display: block;
+  font-family: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.85;
+}
+
+.wordmark__tagline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 7px;
+  font-family: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.wordmark__research {
+  position: relative;
+  display: inline-flex;
+  padding: 0 2px 5px 0;
+  color: var(--ink);
+  font-family: "Rock Salt", cursive;
+  font-size: 0.82em;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.wordmark__letters {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.wordmark__letter {
+  display: inline-block;
+}
+
+.wordmark__scribble {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  overflow: visible;
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-width: 1.7;
+}
+
+.wordmark__verified {
+  color: var(--blue);
+}
+
+.wordmark__tick {
+  width: 15px;
+  height: 15px;
+  margin-left: 1px;
+  fill: none;
+  stroke: var(--blue);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+}
+
+.wordmark--rail .wordmark__name {
+  font-size: 48px;
+}
+
+.wordmark--rail .wordmark__tagline {
+  gap: 2px;
+  margin-top: 5px;
+  font-size: 19px;
+}
+
+.wordmark--rail .wordmark__tick {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 600px) {
+  .wordmark--intake .wordmark__name {
+    font-size: 60px;
+  }
+
+  .wordmark--intake .wordmark__tagline {
+    font-size: 24px;
+  }
+}

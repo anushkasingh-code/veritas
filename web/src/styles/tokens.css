@@ -1,12 +1,12 @@
 :root {
-  --ground: #0e3a78;
-  --ground-deep: #08234d;
-  --line: #eaf2ff;
-  --line-dim: #7fa3d6;
-  --stamp-red: #e5482f;
-  --hold: #f2b84b;
-  --slip: rgba(246, 248, 251, 0.92);
-  --slip-ink: #0b1b3a;
+  --ground: #e6e9ee;
+  --ground-deep: #d3d9e2;
+  --ink: #11151c;
+  --ink-dim: #5b6575;
+  --blue: #0f4cdb;
+  --stamp-red: #d93a22;
+  --hold: #a86a00;
+  --slip: #ffffff;
 }
 
 *,
@@ -27,7 +27,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  color: var(--line);
+  color: var(--ink);
   font-family: Newsreader, Georgia, "Times New Roman", serif;
   font-size: 17px;
   line-height: 1.55;
@@ -38,7 +38,7 @@ body::before {
   position: fixed;
   z-index: -1;
   inset: 0;
-  background-color: color-mix(in srgb, var(--line-dim) 10%, transparent);
+  background-color: color-mix(in srgb, var(--ink) 6%, transparent);
   content: "";
   pointer-events: none;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M32 0H0V32' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E");
@@ -84,7 +84,7 @@ svg {
 }
 
 :focus-visible {
-  outline: 2px solid var(--line);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
 }
 

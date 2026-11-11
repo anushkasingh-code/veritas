@@ -12,8 +12,8 @@
   height: 100%;
   overflow-y: auto;
   padding: 28px 32px 48px;
-  border-left: 1px solid var(--line-dim);
-  color: var(--line);
+  border-left: 1px solid var(--ink-dim);
+  color: var(--ink);
   background: var(--ground-deep);
 }
 
@@ -36,22 +36,22 @@
   flex: 0 0 auto;
   min-height: 40px;
   padding: 6px 12px;
-  border: 1px solid var(--line-dim);
+  border: 1px solid var(--ink-dim);
   border-radius: 0;
-  color: var(--line);
+  color: var(--ink);
   background: transparent;
   cursor: pointer;
   font-weight: 500;
 }
 
 .report-drawer__close:hover {
-  border-color: var(--line);
+  border-color: var(--blue);
   background: var(--ground);
 }
 
 .report-markdown {
   max-width: 68ch;
-  color: var(--line);
+  color: var(--ink);
   font-size: 17px;
   line-height: 1.55;
 }
@@ -92,13 +92,13 @@
 }
 
 .report-markdown a {
-  color: var(--line);
+  color: var(--blue);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .report-markdown a:hover {
-  color: var(--line-dim);
+  color: var(--ink);
 }
 
 @media (max-width: 799px) {

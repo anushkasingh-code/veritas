@@ -20,7 +20,7 @@
   margin-bottom: 24px;
   padding: 12px 16px;
   border-left: 2px solid var(--stamp-red);
-  color: var(--line);
+  color: var(--ink);
 }
 
 .wall-layout__error p {
@@ -31,9 +31,9 @@
 .wall-layout__actions button {
   min-height: 40px;
   padding: 6px 12px;
-  border: 1px solid var(--line-dim);
+  border: 1px solid var(--ink-dim);
   border-radius: 0;
-  color: var(--line);
+  color: var(--ink);
   background: var(--ground-deep);
   cursor: pointer;
   font-weight: 500;
@@ -41,7 +41,7 @@
 
 .wall-layout__error button:hover,
 .wall-layout__actions button:hover {
-  border-color: var(--line);
+  border-color: var(--ink);
   background: var(--ground);
 }
 
@@ -73,7 +73,7 @@
 .wall-layout__empty {
   position: relative;
   z-index: 1;
-  color: var(--line-dim);
+  color: var(--ink-dim);
 }
 
 @media (max-width: 799px) {

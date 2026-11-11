@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import Wordmark from './Wordmark'
 import './Intake.css'
 
 type IntakeProps = {
@@ -35,6 +36,7 @@ export default function Intake({ onSubmit }: IntakeProps) {
   return (
     <main className="intake" data-state="intake">
       <section className="intake__content" aria-label="Start a fact check">
+        <Wordmark placement="intake" />
         <form className="intake__form" onSubmit={submit}>
           <div className="intake__frame">
             <span className="intake__registration intake__registration--top-left" aria-hidden="true" />

@@ -1,4 +1,5 @@
 import type { AgentName, AgentStatus } from '../state'
+import Wordmark from './Wordmark'
 import './Rail.css'
 
 type RailProps = {
@@ -25,6 +26,7 @@ export default function Rail({ agentStatus, claimCount }: RailProps) {
 
   return (
     <aside className="agent-rail" aria-label="Analysis pipeline">
+      <Wordmark placement="rail" />
       <ol className="agent-rail__steps">
         {agents.map((agent) => {
           const status = agentStatus[agent.id]

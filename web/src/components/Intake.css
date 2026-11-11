@@ -19,12 +19,12 @@
 .intake__frame {
   position: relative;
   width: 100%;
-  border: 1px solid var(--line-dim);
+  border: 1px solid var(--ink-dim);
   background: transparent;
 }
 
 .intake__frame:focus-within {
-  outline: 2px solid var(--line);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
 }
 
@@ -36,7 +36,7 @@
   resize: vertical;
   border: 0;
   border-radius: 0;
-  color: var(--line);
+  color: var(--ink);
   background: transparent;
   font-family: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
   font-size: clamp(32px, 5vw, 56px);
@@ -46,7 +46,7 @@
 }
 
 .intake__textarea::placeholder {
-  color: var(--line-dim);
+  color: var(--ink-dim);
   opacity: 1;
 }
 
@@ -65,45 +65,46 @@
 .intake__registration--top-left {
   top: -6px;
   left: -6px;
-  border-top: 2px solid var(--line);
-  border-left: 2px solid var(--line);
+  border-top: 2px solid var(--ink);
+  border-left: 2px solid var(--ink);
 }
 
 .intake__registration--top-right {
   top: -6px;
   right: -6px;
-  border-top: 2px solid var(--line);
-  border-right: 2px solid var(--line);
+  border-top: 2px solid var(--ink);
+  border-right: 2px solid var(--ink);
 }
 
 .intake__registration--bottom-left {
   bottom: -6px;
   left: -6px;
-  border-bottom: 2px solid var(--line);
-  border-left: 2px solid var(--line);
+  border-bottom: 2px solid var(--ink);
+  border-left: 2px solid var(--ink);
 }
 
 .intake__registration--bottom-right {
   right: -6px;
   bottom: -6px;
-  border-right: 2px solid var(--line);
-  border-bottom: 2px solid var(--line);
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
 }
 
 .intake__submit {
   min-height: 48px;
   padding: 10px 22px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--blue);
   border-radius: 0;
-  color: var(--ground);
-  background: var(--line);
+  color: var(--slip);
+  background: var(--blue);
   cursor: pointer;
   font-weight: 500;
 }
 
 .intake__submit:hover {
-  color: var(--line);
+  color: var(--ink);
   background: var(--ground-deep);
+  border-color: var(--ink);
 }
 
 .intake__examples {
@@ -115,17 +116,19 @@
 }
 
 .intake__examples a {
-  color: var(--line-dim);
+  color: var(--ink-dim);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .intake__examples a:hover {
-  color: var(--line);
+  color: var(--ink);
 }
 
 .intake__error {
-  color: var(--stamp-red);
+  padding-left: 10px;
+  border-left: 2px solid var(--stamp-red);
+  color: var(--ink);
 }
 
 .intake__visually-hidden {

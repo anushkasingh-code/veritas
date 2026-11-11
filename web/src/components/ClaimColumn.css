@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 18px;
-  color: var(--line);
+  color: var(--ink);
 }
 
 .claim-column--underexposed {
@@ -42,7 +42,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--line-dim);
+  color: var(--ink-dim);
   font-size: 14px;
 }
 
@@ -56,18 +56,18 @@
 .confidence__tick {
   width: 2px;
   height: 8px;
-  background: var(--line-dim);
+  background: var(--ink);
 }
 
 .confidence__tick--filled {
   height: 14px;
-  background: var(--line);
+  background: var(--ink);
 }
 
 .claim-column__reasoning {
   max-width: 68ch;
   margin: 0;
-  color: var(--line);
+  color: var(--ink);
   font-size: 17px;
   line-height: 1.55;
 }
@@ -86,29 +86,29 @@
   flex-direction: column;
   gap: 4px;
   padding: 12px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--ink);
   border-radius: 0;
-  color: var(--slip-ink);
+  color: var(--ink);
   background: var(--slip);
-  box-shadow: 1px 1px 0 var(--line-dim);
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--ink) 15%, transparent);
   text-decoration: none;
 }
 
 .source-slip:focus-visible {
-  outline: 2px solid var(--line);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
 }
 
 .source-slip__domain {
   overflow: hidden;
-  color: var(--slip-ink);
+  color: var(--ink);
   font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .source-slip__title {
-  color: var(--slip-ink);
+  color: var(--ink);
   font-size: 17px;
   font-weight: 500;
   line-height: 1.25;
@@ -117,7 +117,7 @@
 .source-slip__snippet {
   display: -webkit-box;
   overflow: hidden;
-  color: var(--slip-ink);
+  color: var(--ink);
   font-size: 14px;
   line-height: 1.4;
   -webkit-box-orient: vertical;

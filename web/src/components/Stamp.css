@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: center;
   padding: 4px 10px;
-  border: 2px solid var(--line);
-  color: var(--ground);
-  background: var(--line);
+  border: 2px solid var(--blue);
+  color: var(--slip);
+  background: var(--blue);
   font-family: Newsreader, Georgia, "Times New Roman", serif;
   font-size: 17px;
   font-weight: 500;
@@ -17,7 +17,7 @@
 
 .stamp--refuted {
   border: 3px double var(--stamp-red);
-  color: var(--stamp-red);
+  color: var(--ink);
   background: transparent;
 }
 
@@ -34,13 +34,13 @@
 
 .stamp--inconclusive {
   border: 2px dashed var(--hold);
-  color: var(--hold);
+  color: var(--ink);
   background: transparent;
 }
 
 .stamp--pending {
-  border: 1px dashed var(--line-dim);
-  color: var(--line-dim);
+  border: 1px dashed var(--ink-dim);
+  color: var(--ink);
   background: transparent;
 }
 

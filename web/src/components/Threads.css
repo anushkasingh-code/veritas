@@ -22,10 +22,10 @@
   z-index: 2;
   width: min(280px, 80vw);
   padding: 10px 12px;
-  border: 1px solid var(--line);
-  color: var(--slip-ink);
+  border: 1px solid var(--ink);
+  color: var(--ink);
   background: var(--slip);
-  box-shadow: 1px 1px 0 var(--line-dim);
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--ink) 15%, transparent);
   font-size: 14px;
   line-height: 1.4;
   pointer-events: none;
