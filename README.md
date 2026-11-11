@@ -1,4 +1,24 @@
-VERITAS— research, verified
+<p align="center">
+  <img src="veritas-social-preview.png" alt="veritas: research, verified" width="760">
+</p>
+
+<p align="center"><b>Paste a claim. Watch five AI agents check it against the live web.</b></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/LangGraph-1C3C3C?logoColor=white" alt="LangGraph">
+  <img src="https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white" alt="MongoDB">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license">
+</p>
+
+<!-- After deploying and recording your walkthrough, uncomment and fill in:
+<p align="center"><a href="https://YOUR-LIVE-URL">Live demo</a> · <a href="https://YOUR-LOOM-URL">Walkthrough</a></p>
+-->
+
+---
 
 ## What is veritas?
 
@@ -200,6 +220,8 @@ All settings live in `backend/.env`; see `backend/.env.example` for the full lis
 
 ```
 veritas/
+├── DESIGN.md              visual design system for the web client
+├── API_CONTRACT.md        stream and response shapes the client relies on
 ├── backend/
 │   ├── app/
 │   │   ├── agents/        claim extractor, retriever, verifier, contradiction detector, report generator (+ prompts)
@@ -230,6 +252,10 @@ veritas/
 - Saved analysis history in the interface
 - Source credibility weighting
 - Automated tests and evaluation against a labelled claim set
+
+## Credits
+
+veritas began as a team project at HackHazards '26 ([original repository](https://github.com/anushkasingh-code/multi-agent-fact-verification)), built with teammates including [@durgesh-1801](https://github.com/durgesh-1801). This repository is the continuation: a reworked backend (provider support, parallel verification, streaming) and a ground-up redesigned web interface, by [Anushka Singh](https://github.com/anushkasingh-code).
 
 ## License
 
